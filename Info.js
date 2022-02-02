@@ -3,7 +3,7 @@
 // bei Verwendung von URI, kann der Browser zusätzlich cachen
 // und mittels resources hinte kann vorab geladen werden (preload) 
 // siehe: MDN resource hints
-import { html, render } from 'lit-html/lit-html.js';
+import { html, render } from './lit-html/lit-html.js';
 
 class Info extends HTMLElement {
 
