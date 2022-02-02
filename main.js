@@ -29,8 +29,7 @@ const urlParams = new URLSearchParams(queryString);
 const idToken = urlParams.get('id_token')
 // console.log("ID Token: ", idToken);
 
-/*
+
 if (null == idToken) {
     window.location.replace('login.html');
 }
-*/
