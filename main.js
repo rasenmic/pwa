@@ -1,15 +1,15 @@
-import 'Info.js'
-import 'Video.js'
-import 'Prescription.js'
-import 'Login.js'
-import {Router} from 'vaadin-router.js';
+import './Info.js'
+import './Video.js'
+import './Prescription.js'
+import './Login.js'
+import {Router} from './vaadin-router.js';
 
 window.onload = () => {
     'use strict';
   
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker
-               .register('sw.js');
+               .register('./sw.js');
     }
 }
 
