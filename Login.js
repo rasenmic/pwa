@@ -17,7 +17,7 @@ class Login extends HTMLElement {
     connectedCallback() {
         //this.innerHTML=
         const template = html`
-        <h2>Login</h2>
+        <h2>version: 1</h2>
          `;
 
          render(template, this);

@@ -6,23 +6,23 @@
     <title>Video Sprechstunde</title>
     <link rel="stylesheet" href="style.css">
     <!-- PWA -->
-    
+
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="white" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />  
-    <link rel="apple-touch-icon" href="images/hello-icon-152.png">   
-    <meta name="theme-color" content="white"/>  
-    <meta name="apple-mobile-web-app-capable" content="yes">  
-    <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
-    <meta name="apple-mobile-web-app-title" content="Video Sprechstunde"> 
-    <meta name="msapplication-TileImage" content="images/hello-icon-144.png">  
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/hello-icon-152.png">
+    <meta name="theme-color" content="white" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Video Sprechstunde">
+    <meta name="msapplication-TileImage" content="images/hello-icon-144.png">
     <meta name="msapplication-TileColor" content="#FFFFFF">
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body class="fullscreen">
-    <base href="https://rasenmic.github.io/pwa/">
+    <!--base href="https://rasenmic.github.io/pwa/"-->
 
     <div class="container">
         <!--button onclick="login()">Login</button-->
@@ -45,16 +45,16 @@
         <script src="main.js" type="module"></script>
 
         <script type="text/javascript">// 1. open popup window
-            function login(){
-             popup = window.open ("login.html","mywindow", "width=350,height=250");
+            function login() {
+                popup = window.open("login.html", "mywindow", "width=350,height=250");
             }// 2. listen for message from popup
-            window.addEventListener('message',  updateAuthInfo);// 3. update html when event is detected
-            function  updateAuthInfo(e){
-             document.querySelector("#username").innerText = e.data.username;
-             document.querySelector("#password").innerText = e.data.password;
-             
-             // 4. close popup
-             popup.close();
+            window.addEventListener('message', updateAuthInfo);// 3. update html when event is detected
+            function updateAuthInfo(e) {
+                document.querySelector("#username").innerText = e.data.username;
+                document.querySelector("#password").innerText = e.data.password;
+
+                // 4. close popup
+                popup.close();
             }</script>
     </div>
 </body>
