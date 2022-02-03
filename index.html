@@ -1,62 +1,24 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <title>Video Sprechstunde</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- PWA -->
-
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="white" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="images/hello-icon-152.png">
-    <meta name="theme-color" content="white" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Video Sprechstunde">
-    <meta name="msapplication-TileImage" content="images/hello-icon-144.png">
-    <meta name="msapplication-TileColor" content="#FFFFFF">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>Hello World</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" href="images/hello-icon-152.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="white"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Hello World">
+  <meta name="msapplication-TileImage" content="images/hello-icon-144.png">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
 </head>
-
 <body class="fullscreen">
-    <!--base href="https://rasenmic.github.io/pwa/"-->
-
-    <div class="container">
-        <!--button onclick="login()">Login</button-->
-        <main>
-        </main>
-        <nav>
-            <a href="/info" class="nav-item">
-                <img src="images/info.png" />
-            </a>
-            <a href="/video" class="nav-item">
-                <img src="images/camera.png" />
-            </a>
-            <a href="/prescription" class="nav-item">
-                <img src="images/document-signed.png" />
-            </a>
-        </nav>
-    </div>
-    <div>
-        <!-- load script, as the application main code. Has to happen before the </body>-tag -->
-        <script src="main.js" type="module"></script>
-
-        <script type="text/javascript">// 1. open popup window
-            function login() {
-                popup = window.open("login.html", "mywindow", "width=350,height=250");
-            }// 2. listen for message from popup
-            window.addEventListener('message', updateAuthInfo);// 3. update html when event is detected
-            function updateAuthInfo(e) {
-                document.querySelector("#username").innerText = e.data.username;
-                document.querySelector("#password").innerText = e.data.password;
-
-                // 4. close popup
-                popup.close();
-            }</script>
-    </div>
+  <div class="container">
+    <h1 class="title">Hello World!</h1>
+  </div>
+  <script src="js/main.js"></script>
 </body>
-
 </html>
