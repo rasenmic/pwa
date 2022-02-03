@@ -1,20 +1,24 @@
+var GHPATH = '/pwa';
 var APP_PREFIX = 'pwa_';
-var VERSION = 'version_02';
-var CACHE_NAME = APP_PREFIX + VERSION
+var VERSION = 'version_002';
 var URLS = [    
-  '/pwa/',
-  '/pwa/index.html'
+  `${GHPATH}/`,
+  `${GHPATH}/index.html`,
+  `${GHPATH}/css/styles.css`,
+  `${GHPATH}/images/icon.png`,
+  `${GHPATH}/js/main.js`
 ]
 
+var CACHE_NAME = APP_PREFIX + VERSION
 self.addEventListener('fetch', function (e) {
-  console.log('fetch request : ' + e.request.url);
+  console.log('Fetch request : ' + e.request.url);
   e.respondWith(
     caches.match(e.request).then(function (request) {
       if (request) { 
-        console.log('responding with cache : ' + e.request.url);
+        console.log('Responding with cache : ' + e.request.url);
         return request
       } else {       
-        console.log('file is not cached, fetching : ' + e.request.url);
+        console.log('File is not cached, fetching : ' + e.request.url);
         return fetch(e.request)
       }
     })
@@ -24,7 +28,7 @@ self.addEventListener('fetch', function (e) {
 self.addEventListener('install', function (e) {
   e.waitUntil(
     caches.open(CACHE_NAME).then(function (cache) {
-      console.log('installing cache : ' + CACHE_NAME);
+      console.log('Installing cache : ' + CACHE_NAME);
       return cache.addAll(URLS)
     })
   )
@@ -39,7 +43,7 @@ self.addEventListener('activate', function (e) {
       cacheWhitelist.push(CACHE_NAME);
       return Promise.all(keyList.map(function (key, i) {
         if (cacheWhitelist.indexOf(key) === -1) {
-          console.log('deleting cache : ' + keyList[i] );
+          console.log('Deleting cache : ' + keyList[i] );
           return caches.delete(keyList[i])
         }
       }))
