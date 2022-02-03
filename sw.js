@@ -1,18 +1,18 @@
 var cacheName = 'video-pwa';
 var filesToCache = [
-    '/',
-    '/login.html',
-    '/index.html',
-    '/style.css',
-    '/main.js',
-    '/Video.js',
-    '/Info.js',
-    '/Prescription.js',
-    '/vaadin-router.js',
-    '/favicon.ico',
-    '/images/camera.png',
-    '/images/info.png',
-    '/images/document-signed.png',
+    './',
+    './login.html',
+    './index.html',
+    './style.css',
+    './main.js',
+    './Video.js',
+    './Info.js',
+    './Prescription.js',
+    './vaadin-router.js',
+    './favicon.ico',
+    './images/camera.png',
+    './images/info.png',
+    './images/document-signed.png',
 ];
 
 /* Start the service worker and cache all of the app's content */
