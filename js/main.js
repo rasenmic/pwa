@@ -1,3 +1,5 @@
+
+console.log('I am running!');
 /*
 window.onload = () => {
   'use strict';
