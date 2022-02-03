@@ -1,10 +1,12 @@
 var GHPATH = '/pwa';
 var APP_PREFIX = 'pwa_';
 var VERSION = 'version_002';
+
+/* IMPORTANT: no good error handling. Make sure filenames are 100% correct */
 var URLS = [    
   `${GHPATH}/`,
   `${GHPATH}/index.html`,
-  `${GHPATH}/css/styles.css`,
+  `${GHPATH}/css/style.css`,
   `${GHPATH}/js/main.js`,
   `${GHPATH}/favicon.ico`
 ]
