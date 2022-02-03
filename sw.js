@@ -1,4 +1,7 @@
 var cacheName = 'hello-pwa';
+
+//const GHPATH ='/pwa';
+
 var filesToCache = [
   './',
   './index.html',

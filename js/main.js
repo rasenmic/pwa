@@ -1,3 +1,4 @@
+/*
 window.onload = () => {
   'use strict';
 
@@ -6,3 +7,4 @@ window.onload = () => {
              .register('./sw.js');
   }
 }
+*/
