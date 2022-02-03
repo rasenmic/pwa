@@ -28,7 +28,6 @@
       }],
     "lang": "en-US",
     "start_url": "/",
-    "scope": ".",
     "display": "standalone",
     "background_color": "white",
     "theme_color": "white"
