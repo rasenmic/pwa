@@ -9,9 +9,9 @@ const outlet = document.querySelector('main');
 const router = new Router(outlet);
 router.setRoutes([
   {path: '/',     component: 'x-login-view'},
-  {path: '/info',  component: 'x-info-view'},
-  {path: '/video', component: 'x-video-view'},
-  {path: '/prescription', component: 'x-prescription-view'}
+  {path: '/pwa/info',  component: 'x-info-view'},
+  {path: '/pwa/video', component: 'x-video-view'},
+  {path: '/pwa/prescription', component: 'x-prescription-view'}
   //{path: '(.*)', component: 'x-login-view'},
 ]);
 
